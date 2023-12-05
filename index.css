@@ -1,0 +1,86 @@
+body {
+    background-color: #001f3f; /* Azul fuerte */
+    font-family: Arial, sans-serif;
+    height: 1100px;
+}
+
+h1 {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; /* Redondea las esquinas */
+}
+
+h1 img {
+    width: 50px;
+    height: 50px; /* Ajusta el tamaño según tus preferencias */
+    margin-right: 100px; /* Añade un espacio entre el logo y el texto si deseas */
+    margin-left: 0;
+}
+
+.team-item img {
+    width: 120px;
+    height: 120px;
+    display: block; /* Hacer que la imagen sea un bloque */
+    margin: 0 auto 10px; /* Centrar la imagen y añadir un espacio debajo */
+}
+
+.team-item p {
+    margin: 0; /* Eliminar el margen predeterminado del párrafo */
+}
+
+.team-list {
+    margin-top: 10px; /* Ajusta la separación entre el texto y la imagen */
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    height: 180px;
+    width: 200px; /* Ancho de cada cuadrado */
+    text-align: center; /* Centrar el texto */
+    border-radius: 10px; /* Redondea las esquinas */
+    cursor: pointer; /* Cambia el cursor al hacer hover para indicar que es clickeable */
+}
+.team-item.expanded {
+    transform: scale(1.5); /* Hace el equipo un poco más grande */
+    z-index: 1; /* Asegura que el equipo clickeado esté por encima de los otros */
+}
+
+
+.contact-bar {
+    background-color: #25799b; /* Fondo blanco */
+    color: #000; /* Texto negro */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    transition: transform 0.3s ease; /* Añade una transición de 0.3 segundos */
+}
+body.scrolling .contact-bar {
+    transform: translateY(100%);
+}
+
+.contact-info, .comments {
+    max-width: 45%;
+}
+
+/* Estilo para el efecto de agrandamiento al pasar el mouse */
+.team-list .team-item:hover {
+    transform: scale(1.1);
+}
